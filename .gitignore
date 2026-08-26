@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+.kotlin
+app/build
+node_modules/
+dist/
+.kilo/
+.env

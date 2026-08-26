@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.tanmay.codo"
+    namespace = "com.harsh.codo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.tanmay.codo"
+        applicationId = "com.harsh.codo"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -51,19 +52,16 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("androidx.compose.material:material-icons-extended:1.5.4")
-    implementation("androidx.compose.ui:ui:1.5.4")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.5.4")
-    implementation("androidx.activity:activity-compose:1.8.2")
     implementation("io.coil-kt:coil-compose:2.4.0")
     implementation("androidx.media3:media3-exoplayer:1.2.1")
     implementation("androidx.media3:media3-ui:1.2.1")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
+    
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.storage)
+    implementation(libs.firebase.firestore)
+
     debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }

@@ -26,3 +26,14 @@ google-services.json
 
 # Android Studio
 /.idea/
+# Android Studio
+.idea/
+*.iml
+
+# Firebase configuration
+google-services.json
+
+# Local configuration
+local.properties
+.env
+
